@@ -1,0 +1,5 @@
+
+<%= form_with(model:[@chat_room, @message], remote: true, class: "d-flex") do |f| %>
+    <%= f.text_field :context, autocomplete: 'off' %>
+    <%= f.submit data:{ disable_with: false} %>
+<% end %>
