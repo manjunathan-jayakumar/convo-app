@@ -1,4 +1,6 @@
-<div>
-  <h6><%= message.user.email %></h6>
-  <%= message.context %>
+<div class="cont-<%=message.user.id%>">
+  <div class="message-box msg-<%=message.user.id%>" >
+    <h6><%= message.user.email %></h6>
+    <%= message.context %>
+  </div>
 </div>
