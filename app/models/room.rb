@@ -9,6 +9,6 @@ class Room < ApplicationRecord
     users.each do |user|
       Participant.create(user_id: user.id, room_id: chat_room.id)
     end
-    return chat_room
+    chat_room
   end
 end
