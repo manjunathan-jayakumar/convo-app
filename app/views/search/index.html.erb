@@ -1,0 +1,27 @@
+<div class="row justify-content-md-center mt-4">
+  <div class="col col-lg-2">
+  </div>
+  <div class="col-md-4">
+    <%= search_form_for(@query, url: search_path, method: :get, class: 'd-flex') do |f| %>
+      <%= f.search_field :email_eq, placeholder: 'Enter email', class: "form-control" %>
+      <%= f.submit %>
+    <% end %>
+
+    <br>
+    <% if @people.present? %>
+      <% @people.each do |user| %>
+        <div class="card text-white bg-dark text-center mb-3">
+          <div class="card-body">
+            <h5 class="card-title"><%= user['record'].name %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= user['record'].email %></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><%= user['sent'] %> sent</h6>
+            <h6 class="card-subtitle mb-2 text-muted"><%= user['received'] %> received</h6>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="col col-lg-2">
+  </div>
+</div>
+

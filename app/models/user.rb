@@ -12,6 +12,10 @@ class User < ApplicationRecord
 
   scope :all_except, ->(user) { where.not(id: user) }
 
+  def self.ransackable_attributes(auth_object = nil)
+    ["created_at", "email", "id", "name", "updated_at"]
+  end
+
   private
 
   def destroy_rooms

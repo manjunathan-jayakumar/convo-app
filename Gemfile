@@ -76,3 +76,5 @@ gem "devise", "~> 4.9"
 
 gem "rubocop", "~> 1.56"
 
+
+gem "ransack", "~> 4.0"
