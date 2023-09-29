@@ -1,11 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Welcome to ConvoApp</h1>
 
 <% if current_user %>
   <%= link_to 'go to chatroom', rooms_path %>
-   <br><br>
-  <%= button_to 'logout', destroy_user_session_path, method: :delete %>
 <% else %>
-  <%= link_to 'Login', new_user_session_path %>
-  <%= link_to 'sign up', new_user_registration_path %>
+  <p>Login to continue</p>
 <% end %>

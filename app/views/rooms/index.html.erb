@@ -1,8 +1,7 @@
 
 <div id="chatroom_container" class="row bg-dark text-light">
   <div id="side_panel" class="col-md-3 col-sm-3">
-    <h5>Welcome <%= current_user.name %>!</h5>
-    <h4> Chats <%= link_to 'search user', search_path, class: "btn btn-outline-secondary" %> </h4>
+    <h4> Chats </h4>
     <div id="chats">
       <% @user_names.each do |usr| %>
         <div class="d-grid gap-2">

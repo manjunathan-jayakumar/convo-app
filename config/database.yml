@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: ConvoApp_development
+  database: ConvApp_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ConvoApp_test
+  database: ConvApp_test
   username: <%= Rails.application.credentials.test[:db_username] %>
   password: <%= Rails.application.credentials.test[:db_password] %>
   host: <%= Rails.application.credentials.test[:db_host] %>
