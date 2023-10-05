@@ -1,0 +1,7 @@
+<h1>Welcome to ConvoApp</h1>
+
+<% if current_user %>
+  <%= link_to 'go to chatroom', rooms_path %>
+<% else %>
+  <p>Login to continue</p>
+<% end %>
