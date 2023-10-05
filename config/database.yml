@@ -87,6 +87,4 @@ test:
 #
 production:
   <<: *default
-  database: ConvoApp_production
-  username: ConvoApp
-  password: <%= ENV["CONVOAPP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
